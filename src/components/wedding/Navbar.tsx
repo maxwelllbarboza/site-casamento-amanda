@@ -30,7 +30,10 @@ export function Navbar() {
       }`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
-        <a href="#top" className="font-script text-2xl sm:text-3xl text-gradient-gold">
+        <a
+          href="#top"
+          className="font-script text-2xl sm:text-3xl text-gradient-gold"
+        >
           A &amp; V
         </a>
         <ul className="hidden lg:flex items-center gap-8">

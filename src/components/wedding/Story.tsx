@@ -7,12 +7,42 @@ import g5 from "@/assets/gallery-5.jpg";
 import g6 from "@/assets/gallery-6.jpg";
 
 const moments = [
-  { date: "Março · 2019", title: "Como nos conhecemos", text: "Um encontro casual entre amigos em comum que mudou tudo. Bastou um olhar para sabermos que algo especial estava começando.", img: g1 },
-  { date: "Maio · 2019", title: "Primeiro encontro", text: "Jantar à luz de velas, conversa que parecia não ter fim. Voltamos para casa de mãos dadas e com a certeza de que queríamos mais.", img: g5 },
-  { date: "Agosto · 2019", title: "Início do namoro", text: "Um pedido simples, um sim cheio de borboletas no estômago. Daquele dia em diante, sempre juntos.", img: g3 },
-  { date: "2021", title: "Nossa primeira viagem", text: "Paris, sob a luz dourada da torre. Descobrimos o mundo e descobrimos o quanto cabemos um no outro.", img: g4 },
-  { date: "Dezembro · 2024", title: "O pedido", text: "Joelho no chão, anel na mão tremendo e lágrimas de felicidade. Era o sim mais óbvio e mais emocionado da nossa vida.", img: g2 },
-  { date: "2026", title: "Preparativos para o grande dia", text: "Cada detalhe pensado com amor para celebrar com quem mais amamos. Falta pouco para o nosso para sempre.", img: g6 },
+  {
+    date: "Março · 2019",
+    title: "Como nos conhecemos",
+    text: "Um encontro casual entre amigos em comum que mudou tudo. Bastou um olhar para sabermos que algo especial estava começando.",
+    img: g1,
+  },
+  {
+    date: "Maio · 2019",
+    title: "Primeiro encontro",
+    text: "Jantar à luz de velas, conversa que parecia não ter fim. Voltamos para casa de mãos dadas e com a certeza de que queríamos mais.",
+    img: g5,
+  },
+  {
+    date: "Agosto · 2019",
+    title: "Início do namoro",
+    text: "Um pedido simples, um sim cheio de borboletas no estômago. Daquele dia em diante, sempre juntos.",
+    img: g3,
+  },
+  {
+    date: "2021",
+    title: "Nossa primeira viagem",
+    text: "Paris, sob a luz dourada da torre. Descobrimos o mundo e descobrimos o quanto cabemos um no outro.",
+    img: g4,
+  },
+  {
+    date: "Dezembro · 2024",
+    title: "O pedido",
+    text: "Joelho no chão, anel na mão tremendo e lágrimas de felicidade. Era o sim mais óbvio e mais emocionado da nossa vida.",
+    img: g2,
+  },
+  {
+    date: "2026",
+    title: "Preparativos para o grande dia",
+    text: "Cada detalhe pensado com amor para celebrar com quem mais amamos. Falta pouco para o nosso para sempre.",
+    img: g6,
+  },
 ];
 
 export function Story() {
@@ -38,13 +68,23 @@ export function Story() {
                     reverse ? "md:[direction:rtl]" : ""
                   }`}
                 >
-                  <div className={`pl-16 md:pl-0 ${reverse ? "md:pr-12 [direction:ltr]" : "md:pl-12"}`}>
-                    <span className="text-xs uppercase tracking-[0.3em] text-primary">{m.date}</span>
-                    <h3 className="font-serif text-3xl sm:text-4xl mt-2 text-foreground">{m.title}</h3>
-                    <p className="mt-4 text-muted-foreground leading-relaxed">{m.text}</p>
+                  <div
+                    className={`pl-16 md:pl-0 ${reverse ? "md:pr-12 [direction:ltr]" : "md:pl-12"}`}
+                  >
+                    <span className="text-xs uppercase tracking-[0.3em] text-primary">
+                      {m.date}
+                    </span>
+                    <h3 className="font-serif text-3xl sm:text-4xl mt-2 text-foreground">
+                      {m.title}
+                    </h3>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">
+                      {m.text}
+                    </p>
                   </div>
 
-                  <div className={`pl-16 md:pl-0 ${reverse ? "md:pl-12 [direction:ltr]" : "md:pr-12"}`}>
+                  <div
+                    className={`pl-16 md:pl-0 ${reverse ? "md:pl-12 [direction:ltr]" : "md:pr-12"}`}
+                  >
                     <div className="overflow-hidden rounded-2xl shadow-card aspect-[4/5]">
                       <img
                         src={m.img}

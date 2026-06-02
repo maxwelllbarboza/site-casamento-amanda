@@ -2,7 +2,9 @@ export function Footer() {
   return (
     <footer className="py-16 bg-background border-t border-gold/15">
       <div className="container mx-auto px-6 text-center">
-        <p className="font-script text-5xl text-gradient-gold">Amanda &amp; Vinicius</p>
+        <p className="font-script text-5xl text-gradient-gold">
+          Amanda &amp; Vinicius
+        </p>
         <div className="divider-ornament max-w-xs mx-auto mt-6">
           <span>♥</span>
         </div>

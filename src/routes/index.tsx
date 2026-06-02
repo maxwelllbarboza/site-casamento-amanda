@@ -22,7 +22,8 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Amanda & Vinicius — Nosso Casamento" },
       {
         property: "og:description",
-        content: "Nossa história, fotos, lista de presentes e confirmação de presença.",
+        content:
+          "Nossa história, fotos, lista de presentes e confirmação de presença.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },

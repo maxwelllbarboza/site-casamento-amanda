@@ -26,7 +26,8 @@ export function Gallery() {
   const [cat, setCat] = useState<Cat>("Todas");
   const [lightbox, setLightbox] = useState<string | null>(null);
 
-  const filtered = cat === "Todas" ? photos : photos.filter((p) => p.cat === cat);
+  const filtered =
+    cat === "Todas" ? photos : photos.filter((p) => p.cat === cat);
 
   return (
     <section id="galeria" className="py-24 sm:py-32 bg-background">

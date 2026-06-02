@@ -40,7 +40,9 @@ export function Countdown({ target }: CountdownProps) {
             </span>
           </div>
           {i < items.length - 1 && (
-            <span className="text-gold/40 mx-1 sm:mx-2 text-2xl font-serif">·</span>
+            <span className="text-gold/40 mx-1 sm:mx-2 text-2xl font-serif">
+              ·
+            </span>
           )}
         </div>
       ))}

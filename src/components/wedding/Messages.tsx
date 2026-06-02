@@ -1,13 +1,28 @@
 import { useState, type FormEvent } from "react";
 import { SectionTitle } from "./SectionTitle";
 
-interface Msg { name: string; text: string }
+interface Msg {
+  name: string;
+  text: string;
+}
 
 const seed: Msg[] = [
-  { name: "Mariana & João", text: "Que esse amor seja eterno como o nosso carinho por vocês. Felicidades!" },
-  { name: "Tio Roberto", text: "Vocês são lindos juntos. Que Deus abençoe essa nova jornada." },
-  { name: "Camila", text: "Amanda, você merece todo o amor do mundo. Vini, cuide bem dela!" },
-  { name: "Família Souza", text: "Mal podemos esperar para celebrar com vocês. Contagem regressiva!" },
+  {
+    name: "Mariana & João",
+    text: "Que esse amor seja eterno como o nosso carinho por vocês. Felicidades!",
+  },
+  {
+    name: "Tio Roberto",
+    text: "Vocês são lindos juntos. Que Deus abençoe essa nova jornada.",
+  },
+  {
+    name: "Camila",
+    text: "Amanda, você merece todo o amor do mundo. Vini, cuide bem dela!",
+  },
+  {
+    name: "Família Souza",
+    text: "Mal podemos esperar para celebrar com vocês. Contagem regressiva!",
+  },
 ];
 
 export function Messages() {
@@ -66,7 +81,9 @@ export function Messages() {
               <p className="text-foreground/85 font-serif italic text-lg leading-relaxed">
                 "{m.text}"
               </p>
-              <p className="mt-4 text-xs uppercase tracking-[0.3em] text-primary">— {m.name}</p>
+              <p className="mt-4 text-xs uppercase tracking-[0.3em] text-primary">
+                — {m.name}
+              </p>
             </div>
           ))}
         </div>

@@ -1,11 +1,31 @@
 import { SectionTitle } from "./SectionTitle";
 
 const info = [
-  { label: "Cerimônia", value: "14 de Novembro de 2026", sub: "Sábado · 16h00" },
-  { label: "Local", value: "Espaço Villa Bella", sub: "Rua das Flores, 1234 · São Paulo" },
-  { label: "Recepção", value: "A seguir, no mesmo local", sub: "Coquetel · Jantar · Festa" },
-  { label: "Dress Code", value: "Black Tie Opcional", sub: "Tons sóbrios · evite branco" },
-  { label: "Estacionamento", value: "Valet gratuito", sub: "Disponível no local" },
+  {
+    label: "Cerimônia",
+    value: "14 de Novembro de 2026",
+    sub: "Sábado · 16h00",
+  },
+  {
+    label: "Local",
+    value: "Espaço Villa Bella",
+    sub: "Rua das Flores, 1234 · São Paulo",
+  },
+  {
+    label: "Recepção",
+    value: "A seguir, no mesmo local",
+    sub: "Coquetel · Jantar · Festa",
+  },
+  {
+    label: "Dress Code",
+    value: "Black Tie Opcional",
+    sub: "Tons sóbrios · evite branco",
+  },
+  {
+    label: "Estacionamento",
+    value: "Valet gratuito",
+    sub: "Disponível no local",
+  },
   { label: "Contato", value: "(11) 99999-9999", sub: "Cerimonialista · Júlia" },
 ];
 
@@ -25,8 +45,12 @@ export function EventInfo() {
               key={it.label}
               className="p-8 rounded-2xl border border-gold/20 bg-card shadow-card hover:shadow-soft hover:-translate-y-1 transition-all"
             >
-              <span className="text-xs uppercase tracking-[0.3em] text-primary">{it.label}</span>
-              <p className="font-serif text-2xl mt-3 text-foreground">{it.value}</p>
+              <span className="text-xs uppercase tracking-[0.3em] text-primary">
+                {it.label}
+              </span>
+              <p className="font-serif text-2xl mt-3 text-foreground">
+                {it.value}
+              </p>
               <p className="text-sm text-muted-foreground mt-2">{it.sub}</p>
             </div>
           ))}

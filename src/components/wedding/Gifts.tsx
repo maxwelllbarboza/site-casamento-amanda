@@ -2,18 +2,58 @@ import { useState } from "react";
 import { SectionTitle } from "./SectionTitle";
 
 const gifts = [
-  { name: "Jantar Romântico", desc: "Para celebrarmos o nosso amor a dois.", price: 100, icon: "🍷" },
-  { name: "Passeio na Lua de Mel", desc: "Um passeio inesquecível em destino dos sonhos.", price: 150, icon: "🌅" },
-  { name: "Café da Manhã Especial", desc: "Comecinho de dia perfeito juntos.", price: 80, icon: "☕" },
-  { name: "Sofá da Casa Nova", desc: "O cantinho dos abraços de domingo.", price: 300, icon: "🛋️" },
-  { name: "Geladeira dos Sonhos", desc: "Para o nosso primeiro lar.", price: 500, icon: "❄️" },
-  { name: "Ajuda para a Lua de Mel", desc: "Toda contribuição é bem-vinda!", price: 200, icon: "✈️" },
-  { name: "Reforma do Lar", desc: "Para transformar a casa em um lar.", price: 250, icon: "🏡" },
-  { name: "Finalização da Casa", desc: "Os detalhes finais que fazem a diferença.", price: 1000, icon: "🔑" },
+  {
+    name: "Jantar Romântico",
+    desc: "Para celebrarmos o nosso amor a dois.",
+    price: 100,
+    icon: "🍷",
+  },
+  {
+    name: "Passeio na Lua de Mel",
+    desc: "Um passeio inesquecível em destino dos sonhos.",
+    price: 150,
+    icon: "🌅",
+  },
+  {
+    name: "Café da Manhã Especial",
+    desc: "Comecinho de dia perfeito juntos.",
+    price: 80,
+    icon: "☕",
+  },
+  {
+    name: "Sofá da Casa Nova",
+    desc: "O cantinho dos abraços de domingo.",
+    price: 300,
+    icon: "🛋️",
+  },
+  {
+    name: "Geladeira dos Sonhos",
+    desc: "Para o nosso primeiro lar.",
+    price: 500,
+    icon: "❄️",
+  },
+  {
+    name: "Ajuda para a Lua de Mel",
+    desc: "Toda contribuição é bem-vinda!",
+    price: 200,
+    icon: "✈️",
+  },
+  {
+    name: "Reforma do Lar",
+    desc: "Para transformar a casa em um lar.",
+    price: 250,
+    icon: "🏡",
+  },
+  {
+    name: "Finalização da Casa",
+    desc: "Os detalhes finais que fazem a diferença.",
+    price: 1000,
+    icon: "🔑",
+  },
 ];
 
 export function Gifts() {
-  const [selected, setSelected] = useState<typeof gifts[number] | null>(null);
+  const [selected, setSelected] = useState<(typeof gifts)[number] | null>(null);
 
   return (
     <section id="presentes" className="py-24 sm:py-32 bg-background">
@@ -34,7 +74,9 @@ export function Gifts() {
                 {g.icon}
               </div>
               <h3 className="font-serif text-xl text-foreground">{g.name}</h3>
-              <p className="text-sm text-muted-foreground mt-1 flex-1">{g.desc}</p>
+              <p className="text-sm text-muted-foreground mt-1 flex-1">
+                {g.desc}
+              </p>
               <p className="font-serif text-2xl text-gradient-gold mt-4">
                 R$ {g.price.toLocaleString("pt-BR")}
               </p>

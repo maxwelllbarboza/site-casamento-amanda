@@ -22,9 +22,12 @@ export function RSVP() {
           {sent ? (
             <div className="text-center py-8 animate-float-up">
               <div className="text-5xl mb-4">♥</div>
-              <h3 className="font-serif text-3xl text-gradient-gold">Obrigado!</h3>
+              <h3 className="font-serif text-3xl text-gradient-gold">
+                Obrigado!
+              </h3>
               <p className="mt-3 text-muted-foreground">
-                Sua confirmação foi recebida. Mal podemos esperar para celebrar com você.
+                Sua confirmação foi recebida. Mal podemos esperar para celebrar
+                com você.
               </p>
             </div>
           ) : (
@@ -35,8 +38,17 @@ export function RSVP() {
                 <Field label="E-mail" name="email" type="email" required />
               </div>
               <div className="grid sm:grid-cols-2 gap-5">
-                <Field label="Acompanhantes" name="guests" type="number" defaultValue="0" />
-                <Field label="Restrições alimentares" name="diet" placeholder="Ex.: vegetariano" />
+                <Field
+                  label="Acompanhantes"
+                  name="guests"
+                  type="number"
+                  defaultValue="0"
+                />
+                <Field
+                  label="Restrições alimentares"
+                  name="diet"
+                  placeholder="Ex.: vegetariano"
+                />
               </div>
               <button
                 type="submit"
@@ -69,7 +81,9 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">{label}</span>
+      <span className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+        {label}
+      </span>
       <input
         name={name}
         type={type}
